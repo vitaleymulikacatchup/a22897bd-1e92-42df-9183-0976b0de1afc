@@ -1,59 +1,34 @@
-import type { Metadata } from "next";
-import { Manrope } from "next/font/google";
-import "./globals.css";
-import { PostHogWrapper } from "@/components/PostHogWrapper";
-import Tag from "@/tag/Tag";
+import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
+import './globals.css'
 
-const manrope = Manrope({
-  variable: "--font-manrope",
-  subsets: ["latin"],
-});
+const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: "Global Coder - Transform Your Career with IT Education",
-  description: "Learn programming, web development, data science, and more from industry experts. Join 5,000+ successful graduates with 94% job placement rate. Enroll today!",
-  keywords: "IT training, programming bootcamp, web development courses, data science training, career change, coding education",
-  metadataBase: new URL("https://globalcoder.com"),
-  alternates: {
-    canonical: "https://globalcoder.com"
-  },
+  title: 'Global Coder - Transform Your Career with IT Education',
+  description: 'Learn programming, web development, data science, and more from industry experts. Transform your career with cutting-edge IT education at Global Coder.',
+  keywords: ['IT education', 'programming courses', 'web development', 'data science', 'coding bootcamp', 'career transformation'],
   openGraph: {
-    title: "Global Coder - Transform Your Career with IT Education",
-    description: "Learn programming, web development, data science, and more from industry experts. Join 5,000+ successful graduates with 94% job placement rate.",
-    url: "https://globalcoder.com",
-    siteName: "Global Coder",
-    images: [{
-      url: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_34kFQ1mvageIxtFsoHwjFOCooyh/uploaded-1763738559054-1l998plc.png",
-      alt: "Global Coder IT education programs"
-    }],
-    type: "website"
+    title: 'Global Coder - Transform Your Career with IT Education',
+    description: 'Learn programming, web development, data science, and more from industry experts. Transform your career with cutting-edge IT education at Global Coder.',
+    type: 'website',
+    siteName: 'Global Coder'
   },
   twitter: {
-    card: "summary_large_image",
-    title: "Global Coder - Transform Your Career with IT Education",
-    description: "Learn programming, web development, data science, and more from industry experts. Join 5,000+ successful graduates with 94% job placement rate.",
-    images: ["https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_34kFQ1mvageIxtFsoHwjFOCooyh/uploaded-1763738559054-1l998plc.png"]
-  },
-  robots: {
-    index: true,
-    follow: true
+    card: 'summary_large_image',
+    title: 'Global Coder - Transform Your Career with IT Education',
+    description: 'Learn programming, web development, data science, and more from industry experts. Transform your career with cutting-edge IT education at Global Coder.'
   }
-};
+}
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: {
+  children: React.ReactNode
+}) {
   return (
     <html lang="en">
-      <PostHogWrapper>
-        <body
-          className={`${manrope.variable} antialiased`}
-        >
-          <Tag />
-          {children}
-        
+      <body className={inter.className}>{children}
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -1272,7 +1247,6 @@ export default function RootLayout({
           }}
         />
       </body>
-      </PostHogWrapper>
     </html>
-  );
+  )
 }

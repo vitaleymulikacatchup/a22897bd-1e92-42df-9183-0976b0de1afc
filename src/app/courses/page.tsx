@@ -1,38 +1,80 @@
-"use client"
+"use client";
 
 import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
-import NavbarStyleMinimal from '@/components/navbar/NavbarStyleMinimal';
+import NavbarStyleApple from '@/components/navbar/NavbarStyleApple/NavbarStyleApple';
+import FeatureCardThree from '@/components/sections/feature/featureCardThree/FeatureCardThree';
 import ProductCardTwo from '@/components/sections/product/ProductCardTwo';
 import PricingCardOne from '@/components/sections/pricing/PricingCardOne';
-import FaqDouble from '@/components/sections/faq/FaqDouble';
 import FooterBase from '@/components/sections/footer/FooterBase';
-import Link from "next/link";
-import { Layers, DollarSign, Star, Sparkles, Crown, HelpCircle } from 'lucide-react';
+import { BookOpen, Layers, DollarSign, Star, Sparkles, Crown } from 'lucide-react';
 
 export default function CoursesPage() {
   return (
     <ThemeProvider
-      defaultButtonVariant="expand-hover"
-      defaultTextAnimation="background-highlight"
-      borderRadius="sharp"
-      contentWidth="large"
-      sizing="small"
+      defaultButtonVariant="text-stagger"
+      defaultTextAnimation="entrance-slide"
+      borderRadius="rounded"
+      contentWidth="medium"
+      sizing="medium"
       background="circleGradient"
       cardStyle="glass-elevated"
-      primaryButtonStyle="diagonal-gradient"
-      secondaryButtonStyle="solid"
+      primaryButtonStyle="gradient"
+      secondaryButtonStyle="glass"
       showBlurBottom={false}
     >
       <div id="nav" data-section="nav">
-        <NavbarStyleMinimal
+        <NavbarStyleApple
+          navItems={[
+            { name: 'Home', id: '/' },
+            { name: 'About', id: '/about' },
+            { name: 'Contact', id: '/contact' }
+          ]}
           brandName="Global Coder"
-          button={{
-            text: "Enroll Now",
-            href: "/contact"
-          }}
         />
       </div>
-
+      
+      <div id="feature" data-section="feature">
+        <FeatureCardThree
+          title="Our Courses"
+          description="Comprehensive IT programs designed to take you from beginner to professional"
+          tag="Learn"
+          tagIcon={BookOpen}
+          textboxLayout="default"
+          gridVariant="uniform-all-items-equal"
+          animationType="slide-up"
+          features={[
+            {
+              id: '01',
+              title: 'Web Development',
+              description: 'Master HTML, CSS, JavaScript, React, and Node.js to build modern web applications',
+              imageSrc: 'https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_34kFQ1mvageIxtFsoHwjFOCooyh/uploaded-1763738563898-vtrke2vp.png',
+              imageAlt: 'Web development course materials'
+            },
+            {
+              id: '02',
+              title: 'Python Programming',
+              description: 'Learn Python fundamentals, automation, and backend development',
+              imageSrc: 'https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_34kFQ1mvageIxtFsoHwjFOCooyh/uploaded-1763738565090-yxfnwmxo.png',
+              imageAlt: 'Python programming course'
+            },
+            {
+              id: '03',
+              title: 'Data Science',
+              description: 'Explore data analysis, machine learning, and AI with Python and R',
+              imageSrc: 'https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_34kFQ1mvageIxtFsoHwjFOCooyh/uploaded-1763738566284-yi3ulym5.jpg',
+              imageAlt: 'Data science and analytics course'
+            },
+            {
+              id: '04',
+              title: 'Mobile Development',
+              description: 'Create iOS and Android apps using React Native and Flutter',
+              imageSrc: 'https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_34kFQ1mvageIxtFsoHwjFOCooyh/uploaded-1763738567375-j598er2j.jpg',
+              imageAlt: 'Mobile app development course'
+            }
+          ]}
+        />
+      </div>
+      
       <div id="product" data-section="product">
         <ProductCardTwo
           title="Training Programs"
@@ -44,39 +86,39 @@ export default function CoursesPage() {
           animationType="slide-up"
           products={[
             {
-              id: "1",
-              brand: "Global Coder",
-              name: "Foundation Program",
-              price: "$2,999",
+              id: '1',
+              brand: 'Global Coder',
+              name: 'Foundation Program',
+              price: '$2,999',
               rating: 5,
-              reviewCount: "1.2k",
-              imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_34kFQ1mvageIxtFsoHwjFOCooyh/uploaded-1763738568431-wvhhnfrm.jpg",
-              imageAlt: "Foundation programming course"
+              reviewCount: '1.2k',
+              imageSrc: 'https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_34kFQ1mvageIxtFsoHwjFOCooyh/uploaded-1763738568431-wvhhnfrm.jpg',
+              imageAlt: 'Foundation programming course'
             },
             {
-              id: "2",
-              brand: "Global Coder",
-              name: "Professional Bootcamp",
-              price: "$5,999",
+              id: '2',
+              brand: 'Global Coder',
+              name: 'Professional Bootcamp',
+              price: '$5,999',
               rating: 5,
-              reviewCount: "2.1k",
-              imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_34kFQ1mvageIxtFsoHwjFOCooyh/uploaded-1763738569547-j5uc586i.jpg",
-              imageAlt: "Professional coding bootcamp"
+              reviewCount: '2.1k',
+              imageSrc: 'https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_34kFQ1mvageIxtFsoHwjFOCooyh/uploaded-1763738569547-j5uc586i.jpg',
+              imageAlt: 'Professional coding bootcamp'
             },
             {
-              id: "3",
-              brand: "Global Coder",
-              name: "Enterprise Training",
-              price: "$9,999",
+              id: '3',
+              brand: 'Global Coder',
+              name: 'Enterprise Training',
+              price: '$9,999',
               rating: 5,
-              reviewCount: "450",
-              imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_34kFQ1mvageIxtFsoHwjFOCooyh/uploaded-1763738570777-9gj8lgdm.jpg",
-              imageAlt: "Enterprise software development training"
+              reviewCount: '450',
+              imageSrc: 'https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_34kFQ1mvageIxtFsoHwjFOCooyh/uploaded-1763738570777-9gj8lgdm.jpg',
+              imageAlt: 'Enterprise software development training'
             }
           ]}
         />
       </div>
-
+      
       <div id="pricing" data-section="pricing">
         <PricingCardOne
           title="Choose Your Plan"
@@ -87,126 +129,85 @@ export default function CoursesPage() {
           animationType="slide-up"
           plans={[
             {
-              id: "basic",
-              badge: "Popular",
+              id: 'basic',
+              badge: 'Popular',
               badgeIcon: Star,
-              price: "$199/mo",
-              subtitle: "Perfect for beginners starting their IT journey",
+              price: '$199/mo',
+              subtitle: 'Perfect for beginners starting their IT journey',
               features: [
-                "Access to foundation courses",
-                "24/7 online support",
-                "Certificate of completion",
-                "Community access"
+                'Access to foundation courses',
+                '24/7 online support',
+                'Certificate of completion',
+                'Community access'
               ]
             },
             {
-              id: "professional",
-              badge: "Most Popular",
+              id: 'professional',
+              badge: 'Most Popular',
               badgeIcon: Sparkles,
-              price: "$399/mo",
-              subtitle: "Comprehensive program for career switchers",
+              price: '$399/mo',
+              subtitle: 'Comprehensive program for career switchers',
               features: [
-                "All foundation courses",
-                "Advanced specialization tracks",
-                "1-on-1 mentoring sessions",
-                "Career placement assistance",
-                "Portfolio development"
+                'All foundation courses',
+                'Advanced specialization tracks',
+                '1-on-1 mentoring sessions',
+                'Career placement assistance',
+                'Portfolio development'
               ]
             },
             {
-              id: "enterprise",
-              badge: "Premium",
+              id: 'enterprise',
+              badge: 'Premium',
               badgeIcon: Crown,
-              price: "$699/mo",
-              subtitle: "Full-stack training with enterprise focus",
+              price: '$699/mo',
+              subtitle: 'Full-stack training with enterprise focus',
               features: [
-                "Complete curriculum access",
-                "Corporate training modules",
-                "Dedicated career counselor",
-                "Interview preparation",
-                "Job guarantee program"
+                'Complete curriculum access',
+                'Corporate training modules',
+                'Dedicated career counselor',
+                'Interview preparation',
+                'Job guarantee program'
               ]
             }
           ]}
         />
       </div>
-
-      <div id="faq" data-section="faq">
-        <FaqDouble
-          title="Frequently Asked Questions"
-          description="Get answers to common questions about our programs"
-          tag="FAQ"
-          tagIcon={HelpCircle}
-          textboxLayout="default"
-          animationType="smooth"
-          faqs={[
+      
+      <div id="footer" data-section="footer">
+        <FooterBase
+          logoText="Global Coder"
+          copyrightText="© 2025 Global Coder. All rights reserved."
+          columns={[
             {
-              id: "1",
-              title: "Do I need prior programming experience?",
-              content: "No prior experience required! Our programs are designed for beginners. We start with fundamentals and gradually build up to advanced concepts."
+              title: 'Programs',
+              items: [
+                { label: 'Web Development', href: '/courses' },
+                { label: 'Data Science', href: '/courses' },
+                { label: 'Mobile Development', href: '/courses' },
+                { label: 'Python Programming', href: '/courses' }
+              ]
             },
             {
-              id: "2",
-              title: "How long are the programs?",
-              content: "Program lengths vary: Foundation (3 months), Professional Bootcamp (6 months), Enterprise Training (9 months). All include flexible scheduling options."
+              title: 'Company',
+              items: [
+                { label: 'About Us', href: '/about' },
+                { label: 'Our Team', href: '/about' },
+                { label: 'Success Stories', href: '/' },
+                { label: 'Partners', href: '/' }
+              ]
             },
             {
-              id: "3",
-              title: "Do you provide job placement assistance?",
-              content: "Yes! We offer comprehensive career support including resume review, interview preparation, and job placement assistance with our 150+ industry partners."
-            },
-            {
-              id: "4",
-              title: "Are the courses available online?",
-              content: "We offer both in-person and online options. Online students get access to live sessions, recorded lectures, and 24/7 support."
-            },
-            {
-              id: "5",
-              title: "What technologies will I learn?",
-              content: "Technologies vary by track but include HTML/CSS, JavaScript, Python, React, Node.js, databases, cloud platforms, and modern development tools."
-            },
-            {
-              id: "6",
-              title: "Is financing available?",
-              content: "Yes, we offer flexible payment plans, income share agreements, and partnerships with financing companies to make education accessible."
+              title: 'Support',
+              items: [
+                { label: 'FAQ', href: '/' },
+                { label: 'Contact Us', href: '/contact' },
+                { label: 'Student Portal', href: 'https://portal.globalcoder.com' },
+                { label: 'Career Services', href: 'https://careers.globalcoder.com' }
+              ]
             }
           ]}
         />
       </div>
-
-      <FooterBase
-        logoText="Global Coder"
-        copyrightText="© 2025 Global Coder. All rights reserved."
-        columns={[
-          {
-            title: "Programs",
-            items: [
-              { label: "Web Development", href: "/courses" },
-              { label: "Data Science", href: "/courses" },
-              { label: "Mobile Development", href: "/courses" },
-              { label: "Python Programming", href: "/courses" }
-            ]
-          },
-          {
-            title: "Company",
-            items: [
-              { label: "About Us", href: "/about" },
-              { label: "Our Team", href: "/about" },
-              { label: "Success Stories", href: "/" },
-              { label: "Partners", href: "/" }
-            ]
-          },
-          {
-            title: "Support",
-            items: [
-              { label: "FAQ", href: "/contact" },
-              { label: "Contact Us", href: "/contact" },
-              { label: "Student Portal", href: "https://portal.globalcoder.com" },
-              { label: "Career Services", href: "https://careers.globalcoder.com" }
-            ]
-          }
-        ]}
-      />
     </ThemeProvider>
   );
 }

@@ -1,7 +1,6 @@
 "use client";
 
 import React from 'react';
-import { cn } from '@/lib/utils';
 import ButtonTextUnderline from './ButtonTextUnderline';
 import ButtonIconArrow from './ButtonIconArrow';
 import ButtonTextStagger from './ButtonTextStagger/ButtonTextStagger';
@@ -59,12 +58,12 @@ export default function Button<T extends keyof ButtonVariantProps>({
 
   const buttonProps = {
     ...props,
-    onClick: handleClick((props as any).onClick, (props as any).href),
+    onClick: handleClick((props as ButtonVariantProps[T] & { onClick?: () => void }).onClick, (props as ButtonVariantProps[T] & { href?: string }).href),
   };
 
   // Remove href from props since we handle it via onClick
   if ('href' in buttonProps) {
-    delete (buttonProps as any).href;
+    delete (buttonProps as ButtonVariantProps[T] & { href?: string }).href;
   }
 
   switch (variant) {
