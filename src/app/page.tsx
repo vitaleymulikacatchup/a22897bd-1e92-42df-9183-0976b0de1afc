@@ -1,6 +1,7 @@
 "use client";
 
 import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
+import Link from 'next/link';
 import NavbarStyleApple from '@/components/navbar/NavbarStyleApple/NavbarStyleApple';
 import HeroCarouselLogo from '@/components/sections/hero/heroCarouselLogo/HeroCarouselLogo';
 import SplitAbout from '@/components/sections/about/SplitAbout';
@@ -33,9 +34,9 @@ export default function HomePage() {
       <div id="nav" data-section="nav">
         <NavbarStyleApple
           navItems={[
-            { name: 'About', id: 'about' },
-            { name: 'Courses', id: 'courses' },
-            { name: 'Contact', id: 'contact' }
+            { name: 'About', id: '/about' },
+            { name: 'Courses', id: '/courses' },
+            { name: 'Contact', id: '/contact' }
           ]}
           brandName="Global Coder"
         />
@@ -420,7 +421,7 @@ export default function HomePage() {
             {
               id: '1',
               title: 'Do I need prior programming experience?',
-              content: 'No prior experience required! Our programs are designed for beginners. We start with fundamentals and gradually build up to advanced concepts.'
+              content: "No prior experience required! Our programs are designed for beginners. We start with fundamentals and gradually build up to advanced concepts."
             },
             {
               id: '2',
@@ -474,26 +475,26 @@ export default function HomePage() {
             {
               title: 'Programs',
               items: [
-                { label: 'Web Development', href: 'feature' },
-                { label: 'Data Science', href: 'feature' },
-                { label: 'Mobile Development', href: 'feature' },
-                { label: 'Python Programming', href: 'feature' }
+                { label: 'Web Development', href: '/courses' },
+                { label: 'Data Science', href: '/courses' },
+                { label: 'Mobile Development', href: '/courses' },
+                { label: 'Python Programming', href: '/courses' }
               ]
             },
             {
               title: 'Company',
               items: [
-                { label: 'About Us', href: 'about' },
-                { label: 'Our Team', href: 'team' },
-                { label: 'Success Stories', href: 'testimonial' },
-                { label: 'Partners', href: 'social-proof' }
+                { label: 'About Us', href: '/about' },
+                { label: 'Our Team', href: '/about' },
+                { label: 'Success Stories', href: '/' },
+                { label: 'Partners', href: '/' }
               ]
             },
             {
               title: 'Support',
               items: [
-                { label: 'FAQ', href: 'faq' },
-                { label: 'Contact Us', href: 'contact' },
+                { label: 'FAQ', href: '/' },
+                { label: 'Contact Us', href: '/contact' },
                 { label: 'Student Portal', href: 'https://portal.globalcoder.com' },
                 { label: 'Career Services', href: 'https://careers.globalcoder.com' }
               ]

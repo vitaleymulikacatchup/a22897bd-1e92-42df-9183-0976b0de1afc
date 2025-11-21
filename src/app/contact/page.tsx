@@ -1,7 +1,6 @@
 "use client";
 
 import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
-import Link from 'next/link';
 import NavbarStyleApple from '@/components/navbar/NavbarStyleApple/NavbarStyleApple';
 import ContactSplit from '@/components/sections/contact/ContactSplit';
 import FaqDouble from '@/components/sections/faq/FaqDouble';
@@ -60,7 +59,7 @@ export default function ContactPage() {
             {
               id: '1',
               title: 'Do I need prior programming experience?',
-              content: 'No prior experience required! Our programs are designed for beginners. We start with fundamentals and gradually build up to advanced concepts.'
+              content: "No prior experience required! Our programs are designed for beginners. We start with fundamentals and gradually build up to advanced concepts."
             },
             {
               id: '2',
