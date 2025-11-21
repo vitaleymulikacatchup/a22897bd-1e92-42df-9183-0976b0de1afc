@@ -14,7 +14,7 @@ import SocialProofOne from '@/components/sections/socialProof/SocialProofOne';
 import FaqDouble from '@/components/sections/faq/FaqDouble';
 import ContactSplit from '@/components/sections/contact/ContactSplit';
 import FooterBase from '@/components/sections/footer/FooterBase';
-import { Target, BookOpen, Layers, DollarSign, BarChart, Users, MessageSquare, Building, HelpCircle, Rocket, Sparkles, Crown, Star, Github, Linkedin } from 'lucide-react';
+import { Target, BookOpen, Layers, DollarSign, BarChart, Users, MessageSquare, Building, HelpCircle, Rocket, Sparkles, Crown, Star, Github, Linkedin, Code, TrendingUp, Clock, Award } from 'lucide-react';
 
 export default function HomePage() {
   return (
@@ -47,7 +47,7 @@ export default function HomePage() {
           description="Transform your career with cutting-edge IT education. Learn programming, web development, data science, and more from industry experts."
           buttons={[
             { text: 'Start Learning', href: 'contact' },
-            { text: 'View Courses', href: 'courses' }
+            { text: 'View Courses', href: 'feature' }
           ]}
           slides={[
             {
@@ -85,15 +85,18 @@ export default function HomePage() {
             },
             {
               title: 'Hands-on Learning',
-              description: 'Build real projects and gain practical skills employers demand'
+              description: 'Build real projects and gain practical skills employers demand',
+              icon: Code
             },
             {
               title: 'Career Support',
-              description: 'Get personalized guidance and job placement assistance'
+              description: 'Get personalized guidance and job placement assistance',
+              icon: TrendingUp
             },
             {
               title: 'Flexible Schedule',
-              description: 'Choose from full-time, part-time, and online learning options'
+              description: 'Choose from full-time, part-time, and online learning options',
+              icon: Clock
             }
           ]}
         />
@@ -257,6 +260,7 @@ export default function HomePage() {
             },
             {
               id: '2',
+              icon: TrendingUp,
               title: 'Job Placement Rate',
               value: '94%'
             },
@@ -268,6 +272,7 @@ export default function HomePage() {
             },
             {
               id: '4',
+              icon: Award,
               title: 'Industry Partnerships',
               value: '150+'
             }

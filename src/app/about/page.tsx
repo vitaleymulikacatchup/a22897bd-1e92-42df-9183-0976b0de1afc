@@ -5,7 +5,7 @@ import NavbarStyleApple from '@/components/navbar/NavbarStyleApple/NavbarStyleAp
 import SplitAbout from '@/components/sections/about/SplitAbout';
 import TeamCardTwo from '@/components/sections/team/TeamCardTwo';
 import FooterBase from '@/components/sections/footer/FooterBase';
-import { Target, Users, Github, Linkedin } from 'lucide-react';
+import { Target, Users, Github, Linkedin, Code, TrendingUp, Clock } from 'lucide-react';
 
 export default function AboutPage() {
   return (
@@ -50,15 +50,18 @@ export default function AboutPage() {
             },
             {
               title: 'Hands-on Learning',
-              description: 'Build real projects and gain practical skills employers demand'
+              description: 'Build real projects and gain practical skills employers demand',
+              icon: Code
             },
             {
               title: 'Career Support',
-              description: 'Get personalized guidance and job placement assistance'
+              description: 'Get personalized guidance and job placement assistance',
+              icon: TrendingUp
             },
             {
               title: 'Flexible Schedule',
-              description: 'Choose from full-time, part-time, and online learning options'
+              description: 'Choose from full-time, part-time, and online learning options',
+              icon: Clock
             }
           ]}
         />
