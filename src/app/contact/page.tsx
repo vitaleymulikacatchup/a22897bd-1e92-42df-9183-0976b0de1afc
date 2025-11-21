@@ -1,6 +1,7 @@
 "use client";
 
 import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
+import Link from 'next/link';
 import NavbarStyleApple from '@/components/navbar/NavbarStyleApple/NavbarStyleApple';
 import ContactSplit from '@/components/sections/contact/ContactSplit';
 import FaqDouble from '@/components/sections/faq/FaqDouble';

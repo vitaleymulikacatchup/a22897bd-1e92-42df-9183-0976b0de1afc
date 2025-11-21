@@ -1,6 +1,7 @@
 "use client";
 
 import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
+import Link from 'next/link';
 import NavbarStyleApple from '@/components/navbar/NavbarStyleApple/NavbarStyleApple';
 import FeatureCardThree from '@/components/sections/feature/featureCardThree/FeatureCardThree';
 import ProductCardTwo from '@/components/sections/product/ProductCardTwo';
